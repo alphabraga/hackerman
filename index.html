@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+
+<style>
+
+body {
+  margin: 15px;
+  padding: 10px;
+  background: #c0c0c0;
+  zoom: 150%;
+  font-size: 55px !important;
+}
+</style>
+</head>
+
+<body>
+
+
+    <div class="window" style="width: 100%">
+        <div class="title-bar">
+          <div class="title-bar-text">Hackeando o sistema</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <p>Olá,</p>
+
+          <p>Recentemnete você clicou em uma mesagem de email como essa. E <mark> você foi hackeado</mark></p> 
+
+          <img style=" margin-left: auto; margin-right: auto; display: block;" src="unimed.jpg" alt="" width="20%">
+
+          <p> Na realidade <mark>não se tratava de uma propaganda da Unimed</mark>. </p>
+          <p> No momento que você clicou no link, copiamos os dados da sua máquina e capturamos todos os seus dados.</p>
+          <p> Para recuperar os seus dados realize o pagamento clicando no botão abaixo "Realizar Pagamento para liberar regate de dados"</p>
+
+          <button class="action" >Cancelar</button>
+          <button class="action" >Realizar Pagamento para liberar regate de dados</button>
+
+          <br>
+
+        </div>
+      </div>
+
+
+<script>
+
+    const windowBodyElement = document.querySelector('div.window-body')
+
+    windowBodyElement.addEventListener('click', event => {
+
+        event.preventDefault()
+
+        const isButtonElement = event.target.tagName === 'BUTTON'
+
+        if(isButtonElement){
+
+            alert(`Para realizar o pagamento envie o comprovante de 35 mil reais 
+                   via PIX para o email un1m3d@gmail.com`)
+
+        }
+
+    })
+
+
+</script>
+</body>
+
+</html>
